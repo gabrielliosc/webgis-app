@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #058687;
+    --secondary-color: #034d09;
+    --focus-color: #a9b509;
+    --reset-color: #4b0909;
+    --dark-color: #363736;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-color);
+    color: white;
+    font-size: 16px;
+}
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+header h1 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+main {
+    height: 85vh;
+    position: relative;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    padding: 0 .5rem;
+}
+button.hidden {
+    display: none;
+}
+button {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-size: .75rem;
+}
+button#filterButton {
+    background-color: var(--secondary-color);
+}
+button#resetButton {
+    background-color: transparent;
+    padding: 0;
+}
+button:hover {
+    filter: brightness(.8);
+}
+button img {
+    width: .75rem;
+}
+div#filterDiv {
+    display: flex;
+    align-items: center;
+    gap: .875rem;
+}
+div#filter {
+    display: flex;
+    align-items: center;
+    gap: .875rem;
+}
+input {
+    border-radius: 5px;
+    border: none;
+    padding: 6px;
+}
+input[type="text"]:focus {
+    outline: 1px solid var(--focus-color);
+}
+#viewDiv {
+    height: 80vh;
+}
+#legendDiv {
+    position: absolute;
+    bottom: 4rem;
+    right: 1.5rem;
+    padding: 1rem;
+}
+.esri-feature-content {
+    line-height: 1.5;
+}
