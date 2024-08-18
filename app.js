@@ -9,8 +9,12 @@ require([
 (Map, GeoJSONLayer, MapView, Legend, Home) => {
 
     let crasLayerView
-
-    const layer = new GeoJSONLayer({
+/*
+--------------------------------------------------------------------------------------
+    Configuração do webmap com a camada de CRAS e um mapa básico cinza
+--------------------------------------------------------------------------------------
+*/
+    const layer = new GeoJSONLayer({ //Configuração da camada de CRAS a partir do GEOJSON
         url: "./data/query.geojson",
         title: "CRAS",
         renderer: {
@@ -58,6 +62,7 @@ require([
         container: "legendDiv"
     })
 
+    // Adiciona as funções de filtro e reset de filtro aos respectivos botões
     const buttonFilter = document.getElementById("filterButton")
     buttonFilter.addEventListener("click", filterByMunicipio)
 
@@ -65,6 +70,11 @@ require([
     buttonReset.addEventListener("click", resetFilter)
 
     function filterByMunicipio() {
+        /*
+        --------------------------------------------------------------------------------
+            Função para filtrar os CRAS por município
+        --------------------------------------------------------------------------------
+        */
         buttonFilter.classList.add("hidden")
         buttonReset.classList.remove("hidden")
         
@@ -89,6 +99,11 @@ require([
     }
 
     function resetFilter() {
+        /*
+        --------------------------------------------------------------------------------
+            Função para resetar o filtro de município
+        --------------------------------------------------------------------------------
+        */
         buttonFilter.classList.remove("hidden")
         buttonReset.classList.add("hidden")
 
