@@ -30,6 +30,9 @@
 
 <p>Bem vindo(a)! Esse é um pojeto de front-end de visualização de dados geoespaciais</p>
 
+![image](https://github.com/user-attachments/assets/59efdbbc-b7fe-4198-9cd0-6d304af70133)
+
+
 <p>Para baixar os dados utilizados na aplicação foram seguidos os seguintes passos:</p>
 1. Acessar o portal IDE RJ
 
